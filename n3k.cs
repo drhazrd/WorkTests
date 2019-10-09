@@ -194,6 +194,12 @@ public class PlayerScript: MonoBehaviour
 			case "Coin":
 				Destroy(hit.gameObject);
 				break;
+			case "JumpPad":
+				verticalVelocity = JumpForce * 2;
+				break;
+			case "Teleporter":
+				transform.position = hit.transform.GetChild(0).position;
+				break;
 			default:
 				break
 		}
